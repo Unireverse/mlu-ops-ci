@@ -1,5 +1,9 @@
 # /bin/bash
+
+git config --global  --unset https.proxy
+git config --global  --unset http.proxy
 # get PR id
+# raise error and exit if code worked in wrong way.
 set -e
 PR_string=$(echo $GITHUB_REF | grep -Eo "/[0-9]*/")
 pr_id=(${PR_string//// })
