@@ -38,7 +38,7 @@ output {
   dtype: DTYPE_FLOAT
 }
 focal_loss_sigmoid_forward_param: {
-  prefer: 1
+  prefer: 2
   reduction: 0
   alpha: 0.25
   gamma: 2
