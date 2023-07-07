@@ -1178,6 +1178,14 @@ __mlu_func__ void computeScore(T *nram_iou, T *nram_conf, T *nram_cls,
   // mask, set 0
   int *nram_mask_int32 = (int *)nram_iou_p;
   __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
+  __bang_float2int32(nram_mask_int32, nram_iou_p, deal_num, 0);
   __bang_mul_scalar((int *)nram_mask_int32, (int *)nram_mask_int32,
                     (int)0xffffffff, deal_num);
   __bang_cycle_band((char *)nram_cls_p, (char *)nram_cls_p,
