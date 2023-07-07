@@ -31,7 +31,7 @@
 #include "kernels/kernel.h"
 
 static mluOpStatus_t MLUOP_WIN_API initTransposeDescriptor(
-    const mluOpHandle_t handle, const mluOpTensorDescriptor_t input_desc,
+              const mluOpHandle_t handle, const mluOpTensorDescriptor_t input_desc,
     mluOpTransposeDescriptor_t *trans_desc, const int dim, const int *permute,
     size_t *workspace_size) {
   PARAM_CHECK(
