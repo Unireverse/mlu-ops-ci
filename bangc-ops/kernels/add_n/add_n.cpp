@@ -21,7 +21,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *************************************************************************/
 #include "kernels/kernel_wrapper/wrapper.h"
-
+    
 mluOpStatus_t MLUOP_WIN_API mluOpAddN(
     mluOpHandle_t handle,
     const mluOpTensorDescriptor_t input_descs[],
