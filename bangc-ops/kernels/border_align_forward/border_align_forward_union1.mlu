@@ -364,6 +364,7 @@ __mlu_global__ void MLUKernelBorderAlignForward(
       }
       T x = *(boxes_nram + border / 2 * 2);
       T y = *(boxes_nram + border / 2 * 2 + 1);
+      
 
       // gdram_ptr of ouput,argmax_idx
       T *base_output =
@@ -399,6 +400,7 @@ mluOpStatus_t MLUOP_WIN_API KernelBorderAlignForward(
     const int32_t origin_h, const int32_t origin_w, const int32_t origin_c,
     const int32_t origin_k, void *output, int32_t *argmax_idx_nram) {
   // launch kernel
+  return MLUOP_STATUS_SUCCESS;
   if (data_type == mluOpDataType_t::MLUOP_DTYPE_FLOAT) {
     KERNEL_CHECK(MLUKernelBorderAlignForward<<<k_dim, k_type, queue>>>(
         (float *)input, (float *)boxes, pool_size, origin_n, origin_h, origin_w,
