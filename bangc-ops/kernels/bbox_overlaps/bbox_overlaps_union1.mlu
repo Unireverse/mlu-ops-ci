@@ -69,7 +69,7 @@ __mlu_func__ void bboxOverlapsAlignModeImpl(
                                : num_bbox1 - batch_start;
   batch_per_task = MAX(batch_per_task, 0);
 
-  //this is a test
+  // this is a test
   int32_t num_loop_cpy = batch_per_task / batches_stride;
   int32_t num_rem_cpy_batches = batch_per_task % batches_stride;
   num_loop_cpy = num_rem_cpy_batches > 0 ? num_loop_cpy + 1 : num_loop_cpy;
