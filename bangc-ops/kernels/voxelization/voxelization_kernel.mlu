@@ -527,7 +527,6 @@ __mlu_global__ void mluAssignVoxelsCoors(
       const float *points_offset = points + point_idx * num_features;
       __memcpy_async(voxels_offset, points_offset, num_features * sizeof(float),
                      GDRAM2GDRAM);
-
       if (num == 0) {
         int32_t *coors_offset = coors + voxel_idx * 3;
         __memcpy_async(coors_offset, temp_coors + point_idx, sizeof(int32_t),
