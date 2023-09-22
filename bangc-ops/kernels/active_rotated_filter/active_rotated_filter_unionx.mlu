@@ -42,6 +42,7 @@ __mlu_func__ void orientation_move(T *workspace, T *input, const int kH,
                                    const int kW, const int block_num,
                                    const int total_num, const int stride,
                                    const int num_deal) {
+  // this is another test
   const int pre_size = block_num * kH * kW;
   const int later_size = (total_num - block_num) * kH * kW;
   const int total_seg_size = pre_size + later_size;
