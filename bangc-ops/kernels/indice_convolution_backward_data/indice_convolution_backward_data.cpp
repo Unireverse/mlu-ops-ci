@@ -156,7 +156,6 @@ static mluOpStatus_t foolCheckNoPtr(
                  << " of output_grad when sub_m is 1.";
       return MLUOP_STATUS_BAD_PARAM;
     }
-
     if (indice_num[K / 2] < max_indice_num) {
       LOG(ERROR) << api
                  << " The middle number of the indice_num array should be the "
