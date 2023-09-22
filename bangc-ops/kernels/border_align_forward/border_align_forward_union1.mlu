@@ -364,7 +364,6 @@ __mlu_global__ void MLUKernelBorderAlignForward(
       }
       T x = *(boxes_nram + border / 2 * 2);
       T y = *(boxes_nram + border / 2 * 2 + 1);
-      
 
       // gdram_ptr of ouput,argmax_idx
       T *base_output =
