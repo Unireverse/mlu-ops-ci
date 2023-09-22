@@ -400,7 +400,7 @@ mluOpStatus_t MLUOP_WIN_API KernelBorderAlignForward(
     const int32_t origin_h, const int32_t origin_w, const int32_t origin_c,
     const int32_t origin_k, void *output, int32_t *argmax_idx_nram) {
   // launch kernel
-  return MLUOP_STATUS_SUCCESS;
+  // return MLUOP_STATUS_SUCCESS;
   if (data_type == mluOpDataType_t::MLUOP_DTYPE_FLOAT) {
     KERNEL_CHECK(MLUKernelBorderAlignForward<<<k_dim, k_type, queue>>>(
         (float *)input, (float *)boxes, pool_size, origin_n, origin_h, origin_w,
