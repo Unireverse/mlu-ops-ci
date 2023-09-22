@@ -108,7 +108,7 @@ in\_flag = \lvert (z - cz) \rvert <= \frac{dz}{2} \ \& \\
 | 输入数据限制 | `rois` 和 `pts` 在 MLU370 上不支持输入数值为 nan、inf                                                                        |
 | 输入数据限制 | 输入`pts_feature` 在 MLU300 系列上：a. 仅含 INF 时，与 mmcv cuda 结果对齐；b. 当含有 NAN 输入时，结果不对齐                  |
 | 数据规模限制 | 数据维数和 dim 信息需要满足 1.3 中规模限制所列含义和维度                                                                     |
-| 数据范围限制 | `max_pts_each_voxel`数值在 float 类型下不能超过 2880，half 类型不能超过 2930，否则可能导致 coredump                          |
+| 数据范围限制 | `max_pts_each_voxel`数值在 float 类型下不能超过 2976，half 类型不能超过 2944，否则可能导致 coredump                          |
 
 - 说明: 由于硬件限制，当前计算除法无超越函数指令，计算精度不足，可能与 mmcv 在特定数据的计算结果不一致。
 
