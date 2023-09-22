@@ -94,7 +94,7 @@
 | 数据范围限制 | `pts_idx_of_voxels` 和 `argmax` 中点的索引 index 的数值需满足输出 `grad_in` 的所描述点的数量的数值范围，需要在[0, `pts_num` - 1]             |
 | 数据范围限制 | `pts_idx_of_voxels` 和 `argmax` 中不支持含有 INF、NAN 的数值                                                                                 |
 | 数据范围限制 | `pts_idx_of_voxels` 在最后一个维度`max_pts_each_voxel`中的第一个值，表示处于当前体素内的点的个数，该数值需要满足范围 [0, max_pts_each_voxel] |
-| 数据范围限制 | 由于 NRAM 内存限制，`max_pts_each_voxel` 数值不能超过 2048，否则可能会发生内存踩踏导致 coredump                                              |
+| 数据范围限制 | 由于 NRAM 内存限制，`max_pts_each_voxel` 数值不能超过 98240，否则可能会发生内存踩踏导致 coredump                                              |
 
 说明：需要注意，由于本算子与 mmcv 的 cuda 实现均采用 atomicAdd，存在乱序行为，当输出 `grad_in` 中的计算结果含有 INF 或者 NAN 时，计算结果可能与 mmcv cuda 不对齐。
 
